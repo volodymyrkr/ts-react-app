@@ -1,7 +1,10 @@
 {
   "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
   "rules": {
-    "member-access": false
+    "no-console": false //Disable for typescript
+  },
+  "jsRules": {
+    "no-console": false //Disable for javascript
   },
   "linterOptions": {
     "exclude": [

@@ -2,6 +2,7 @@ import * as React from 'react';
 import './App.css';
 
 import DemoComponent from "./demos/demo_0001/components/DemoComponent";
+import FormComponent from "./demos/demo_0002/components/FormComponent";
 import logo from './logo.svg';
 
 class App extends React.Component {
@@ -17,6 +18,7 @@ class App extends React.Component {
         </p>
         <div>
           <DemoComponent name={"Vladimir"}/>
+          <FormComponent defaultValue={"Some text"}/>
         </div>
       </div>
     );
