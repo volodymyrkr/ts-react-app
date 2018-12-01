@@ -1,9 +1,14 @@
 import * as React from "react";
 
-export default class DemoComponent extends React.Component {
+interface IProps {
+  name?: string;
+}
+
+export default class DemoComponent extends React.Component<IProps> {
   public render() {
+    const {name} = this.props;
     return (
-      <div>Hello</div>
+      <div>Hello, {name}</div>
     );
   }
 }
