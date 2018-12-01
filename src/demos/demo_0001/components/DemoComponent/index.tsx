@@ -9,7 +9,7 @@ interface IState {
 }
 
 export default class DemoComponent extends React.Component<IProps, IState> {
-  public state = {
+  state = {
     owner: "Olena"
   };
 
