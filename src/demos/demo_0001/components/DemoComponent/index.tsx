@@ -4,11 +4,20 @@ interface IProps {
   name?: string;
 }
 
-export default class DemoComponent extends React.Component<IProps> {
+interface IState {
+  owner: string;
+}
+
+export default class DemoComponent extends React.Component<IProps, IState> {
+  public state = {
+    owner: "Olena"
+  };
+
   public render() {
     const {name} = this.props;
+    const {owner} = this.state;
     return (
-      <div>Hello, {name}</div>
+      <div>Hello, {name} from {owner}</div>
     );
   }
 }
