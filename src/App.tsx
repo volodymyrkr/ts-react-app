@@ -10,6 +10,7 @@ class App extends React.Component {
       {name: "Demo_0001", link: "/demo_0001", title: "Demo", description: "Some description"},
       {name: "Demo_0002", link: "/demo_0002", title: "Demo", description: "Some description"},
       {name: "Demo_0003", link: "/demo_0003", title: "Demo", description: "Some description"},
+      {name: "Demo_0004", link: "/demo_0004", title: "Demo", description: "Some description"},
     ]
   };
 
