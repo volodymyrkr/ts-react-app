@@ -1,19 +1,45 @@
 import * as React from "react";
 
 interface IProps {
-  defaultValue? :string
+  defaultValue?: string
 }
-export default class FormComponent extends React.Component<IProps> {
+
+interface IState {
+  defaultValue: string
+}
+
+export default class FormComponent extends React.Component<IProps, IState> {
+  public state = {
+    defaultValue: 'Empty string'
+  };
+
+  constructor(props: Readonly<IProps>) {
+    super(props);
+
+    this.setState({
+      defaultValue: props.defaultValue ? props.defaultValue : ''
+    });
+  }
+
   public render() {
-    const {defaultValue} = this.props;
+    const {defaultValue} = this.state;
     return (
       <div>
-        <input value={defaultValue}/>
+        <div>{defaultValue}</div>
+        <input value={defaultValue} onChange={this.changeTextIputHandler}/>
         <button onClick={this.clickSendButtonHandler}>send data</button>
       </div>
     )
   }
 
-  private clickSendButtonHandler(e:React.MouseEvent<HTMLButtonElement>) {
+  private changeTextIputHandler = (e:React.ChangeEvent<HTMLInputElement>) => {
+    console.log("CHANGED");
+    this.setState({
+      defaultValue: e.target.value
+    });
+  };
+
+  private clickSendButtonHandler = (e:React.MouseEvent<HTMLButtonElement>) => {
     console.log("CLICKED");
-  }}
+  };
+}
