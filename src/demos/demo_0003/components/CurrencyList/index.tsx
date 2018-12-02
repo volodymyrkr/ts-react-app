@@ -2,10 +2,14 @@ import * as React from "react";
 export type CurrencyType = "USD" | "EUR" | "HRV";
 
 interface ICurrencyProps {
-  name: CurrencyType
+  name: string
 }
 
 interface ICurrencyListProps {
+  values: ReadonlyArray<CurrencyType>
+}
+
+interface ICurrencyListState {
   values: ReadonlyArray<CurrencyType>
 }
 
@@ -13,11 +17,14 @@ const CurrencyJSX = (props: ICurrencyProps) => {
   return (
     <div>{props.name}</div>
   )
-}
+};
 
-export default class CurrencyList extends React.Component<ICurrencyListProps> {
+export default class CurrencyList extends React.Component<ICurrencyListProps, ICurrencyListState> {
+  public state = {
+    values: generateDefaultList()
+  };
   public render() {
-    const {values} = this.props;
+    const {values} = this.state;
     return (
       <div>
         <header>Currencies:</header>
@@ -34,3 +41,7 @@ export default class CurrencyList extends React.Component<ICurrencyListProps> {
     )
   }
 }
+
+const generateDefaultList = ():ReadonlyArray<CurrencyType> => {
+  return ["USD", "EUR", "HRV"];
+};
