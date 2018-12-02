@@ -1,5 +1,13 @@
 import * as React from "react";
-export type CurrencyType = "USD" | "EUR" | "HRV";
+export enum CurrencyTypes {
+  USD = "usd",
+  EUR = "eur",
+  HRN = "hrn"
+}
+export type CurrencyType =
+  | CurrencyTypes.USD
+  | CurrencyTypes.EUR
+  | CurrencyTypes.HRN;
 
 interface ICurrencyProps {
   name: string
@@ -43,5 +51,9 @@ export default class CurrencyList extends React.Component<ICurrencyListProps, IC
 }
 
 const generateDefaultList = ():ReadonlyArray<CurrencyType> => {
-  return ["USD", "EUR", "HRV"];
+  return [
+    CurrencyTypes.USD,
+    CurrencyTypes.EUR,
+    CurrencyTypes.HRN
+  ];
 };
