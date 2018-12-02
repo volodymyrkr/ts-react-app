@@ -1,24 +1,34 @@
 import * as React from "react";
-type CurrencyType = "USD" | "EUR" | "HRV";
+export type CurrencyType = "USD" | "EUR" | "HRV";
 
 interface ICurrencyProps {
   name: CurrencyType
 }
+
+interface ICurrencyListProps {
+  values: ReadonlyArray<CurrencyType>
+}
+
 const CurrencyJSX = (props: ICurrencyProps) => {
   return (
     <div>{props.name}</div>
   )
 }
 
-export default class CurrencyList extends React.Component {
+export default class CurrencyList extends React.Component<ICurrencyListProps> {
   public render() {
+    const {values} = this.props;
     return (
       <div>
         <header>Currencies:</header>
         <ul>
-          <li><CurrencyJSX name="USD"/></li>
-          <li><CurrencyJSX name="EUR"/></li>
-          <li><CurrencyJSX name="HRV"/></li>
+          {
+            values.map((item, index) => {
+              return (
+                <li key={index}><CurrencyJSX name={item}/></li>
+              )
+            })
+          }
         </ul>
       </div>
     )

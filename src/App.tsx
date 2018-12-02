@@ -3,11 +3,15 @@ import './App.css';
 
 import DemoComponent from "./demos/demo_0001/components/DemoComponent";
 import FormComponent from "./demos/demo_0002/components/FormComponent";
-import CurrencyList from "./demos/demo_0003/components/CurrencyList";
+import CurrencyList, {CurrencyType} from "./demos/demo_0003/components/CurrencyList";
 import logo from './logo.svg';
 
 class App extends React.Component {
   public render() {
+    const currencies:ReadonlyArray<CurrencyType> = [
+      "USD", "EUR", "HRV"
+    ];
+
     return (
       <div className="App">
         <header className="App-header">
@@ -22,7 +26,7 @@ class App extends React.Component {
           <FormComponent defaultValue={"Some text"}/>
         </div>
         <div>
-          <CurrencyList/>
+          <CurrencyList values={currencies}/>
         </div>
       </div>
     );
