@@ -5,6 +5,7 @@ import DemoComponent from "../demos/demo_0001/components/DemoComponent";
 import FormComponent from "../demos/demo_0002/components/FormComponent";
 import CurrencyList from "../demos/demo_0003/components/CurrencyList";
 import CurrenciesPage from "../demos/demo_0004/components/CurrenciesPage";
+import Demo0005 from "../demos/demo_0005";
 
 export default () => {
   return (
@@ -15,6 +16,7 @@ export default () => {
         <Route path="/demo_0002" exact={true} component={FormComponent}/>
         <Route path="/demo_0003" exact={true} component={CurrencyList}/>
         <Route path="/demo_0004" exact={true} component={CurrenciesPage}/>
+        <Route path="/demo_0005" exact={true} component={Demo0005}/>
       </Switch>
     </BrowserRouter>
   )
