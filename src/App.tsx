@@ -12,6 +12,7 @@ class App extends React.Component {
       {name: "Demo_0003", link: "/demo_0003", title: "Demo", description: "Some description"},
       {name: "Demo_0004", link: "/demo_0004", title: "Demo", description: "Some description"},
       {name: "Demo_0005", link: "/demo_0005", title: "Demo", description: "Some description"},
+      {name: "Demo_0006", link: "/demo_0006", title: "Demo ReactCoin", description: "DemoApplication created by tutorial from udemy"},
       {name: "Demo_0007", link: "/demo_0007", title: "Demo", description: "It's just a little demo of creating stream from document events"},
     ]
   };
@@ -27,13 +28,15 @@ class App extends React.Component {
         <p className="App-intro">
           To get started, edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <ul>
         {
           demos.map((item) => {
             return (
-              <Link key={item.name} to={item.link}>{item.name}</Link>
+              <li key={item.name}><Link to={item.link}>{item.name}</Link></li>
             )
           })
         }
+        </ul>
       </div>
     );
   }

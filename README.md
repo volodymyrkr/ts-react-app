@@ -10,9 +10,9 @@ It's just a little demo of creating stream from document events
 ## demo_0006_reactcoin
 
 Demo based on 
-    - tutorial https://www.udemy.com/learn-react-by-building-and-deploying-production-ready-app/learn/v4/overview
-    - git repo https://github.com/philipstubbs13/ReactCoin.git
-    - website https://react-coin-data.herokuapp.com/
+    - tutorial [https://www.udemy.com/learn-react-by-building-and-deploying-production-ready-app/learn/v4/overview](https://www.udemy.com/learn-react-by-building-and-deploying-production-ready-app/learn/v4/overview)
+    - git repo [https://github.com/philipstubbs13/ReactCoin.git](https://github.com/philipstubbs13/ReactCoin.git)
+    - website [https://react-coin-data.herokuapp.com/](https://react-coin-data.herokuapp.com/)
 
 ## demo_0005
 ## demo_0004
