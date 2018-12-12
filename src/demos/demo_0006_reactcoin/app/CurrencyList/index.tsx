@@ -1,5 +1,7 @@
 import * as React from "react";
 import {CurrencyInfoType} from "../../types/CurrencyType";
+import {handleResponse} from "../../helpers/connection/ConnectionHandler";
+import {API_URL} from "../../helpers/connection/Config";
 
 interface ICurrencyListProps {
   someField?: boolean
@@ -22,20 +24,25 @@ export default class CurrencyList extends React.Component<ICurrencyListProps, IC
     }
   }
   public componentDidMount(): void {
-    fetch('https://api.udilia.com/coins/v1/cryptocurrencies?page=1&perPage=20')
-      .then(response => {
-        return response.json().then(json => {
-          return response.ok ? json : Promise.reject(json);
-        });
-      })
+    this.setState({
+      loading: true
+    });
+
+    fetch(`${API_URL}cryptocurrencies?page=1&perPage=20`)
+      .then(handleResponse)
       .then((data) => {
         console.log('Success', data);
         this.setState({
-          currencies: data.currencies
+          currencies: data.currencies,
+          loading: false
         });
       })
       .catch((error) => {
         console.log('Error', error);
+        this.setState({
+          error: error.errorMessage,
+          loading: false
+        })
       });
   }
 
