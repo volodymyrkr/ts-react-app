@@ -4,6 +4,9 @@
 create react-app my-app --scripts-version=react-scripts-ts]
 ```
 
+## demo_0007
+It's just a little demo of creating stream from document events
+
 ## demo_0006_reactcoin
 
 Demo based on 
