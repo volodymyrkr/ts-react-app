@@ -1,7 +1,7 @@
 # Create React App on Typescript
 
 ```sh
-create react-app my-app --scripts-version=react-scripts-ts]
+create react-app my-app --scripts-version=react-scripts-ts
 ```
 
 ## demo_0007
