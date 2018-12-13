@@ -13,6 +13,7 @@ class App extends React.Component {
       {name: "Demo_0004", link: "/demo_0004", title: "Demo", description: "Some description"},
       {name: "Demo_0005", link: "/demo_0005", title: "Demo", description: "Some description"},
       {name: "Demo_0007", link: "/demo_0007", title: "Demo", description: "It's just a little demo of creating stream from document events"},
+      {name: "Demo_0008", link: "/demo_0008", title: "Demo", description: "It's just a little demo of Mobx using"},
     ]
   };
 
