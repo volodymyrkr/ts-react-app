@@ -5,6 +5,8 @@
   width: 3em;
 }
 
-.button-graphic_background {
-  fill: $secondary-color
+.button-graphic {
+  &_background {
+    fill: $secondary-color;
+  }
 }
