@@ -1,0 +1,10 @@
+@import '../../variables.scss';
+
+.button-wrapper {
+  display: inline-block;
+  width: 3em;
+}
+
+.button-graphic_background {
+  fill: $secondary-color
+}

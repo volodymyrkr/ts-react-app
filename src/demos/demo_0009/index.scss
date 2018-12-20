@@ -1,0 +1,13 @@
+.demo-container {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+.wheels-container {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
