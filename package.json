@@ -6,11 +6,14 @@
     "@types/react-router-dom": "^4.3.1",
     "mobx": "^5.8.0",
     "mobx-react": "^5.4.2",
+    "node-sass": "^4.11.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^4.3.1",
+    "react-scripts-scss-ts": "^2.17.1",
     "react-scripts-ts": "3.1.0",
-    "rxjs": "^6.3.3"
+    "rxjs": "^6.3.3",
+    "sass-loader": "^7.1.0"
   },
   "scripts": {
     "start": "react-scripts-ts start",
