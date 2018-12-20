@@ -1,7 +1,7 @@
 # Create React App on Typescript
 
 ```sh
-create react-app my-app --scripts-version=react-scripts-ts]
+create react-app my-app --scripts-version=react-scripts-ts
 ```
 
 Sass isn't supported by default it has to be added more details you can fin here
