@@ -4,6 +4,18 @@
 create react-app my-app --scripts-version=react-scripts-ts]
 ```
 
+Sass isn't supported by default it has to be added more details you can fin here
+    [Link](https://github.com/wmonk/create-react-app-typescript/issues/92#issuecomment-415499593)
+Or you can use this command fro creation the project:
+```sh
+npx create-react-app react-typescript-scss-new --scripts-version=react-scripts-scss-ts
+```
+
+## demo_0009
+This is simple demo how to use in project SVG and SASS
+
+## demo_0008
+
 ## demo_0007
 It's just a little demo of creating stream from document events
 
