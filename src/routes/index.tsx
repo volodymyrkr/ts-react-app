@@ -10,6 +10,7 @@ import Demo0007 from "../demos/demo_0007";
 import Demo0008 from "../demos/demo_0008";
 import Demo0009 from "../demos/demo_0009";
 import Demo0010 from "../demos/demo_0010";
+import Demo0011 from "../demos/demo_0011";
 
 export default () => {
   return (
@@ -25,6 +26,7 @@ export default () => {
         <Route path="/demo_0008" exact={true} component={Demo0008}/>
         <Route path="/demo_0009" exact={true} component={Demo0009}/>
         <Route path="/demo_0010" exact={true} component={Demo0010}/>
+        <Route path="/demo_0011" exact={true} component={Demo0011}/>
       </Switch>
     </BrowserRouter>
   )
