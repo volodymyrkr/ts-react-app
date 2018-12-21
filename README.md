@@ -10,6 +10,11 @@ Or you can use this command fro creation the project:
 ```sh
 npx create-react-app react-typescript-scss-new --scripts-version=react-scripts-scss-ts
 ```
+## demo_0011
+Example of i18next
+
+## demo_0010
+ProgressBar is implemented
 
 ## demo_0009
 This is simple demo how to use in project SVG and SASS
