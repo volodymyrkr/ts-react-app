@@ -1,0 +1,33 @@
+$backgroundcolor: #61dafb;
+$borderradius: 1em;
+$bordersize: 1px;
+$bordercolor: #343267;
+
+.filler {
+  position: relative;
+  width: 10em;
+  height: 2em;
+  overflow: hidden;
+  background-color: $backgroundcolor;
+  border-radius: $borderradius;
+
+  &-border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: $borderradius;
+    -webkit-box-shadow:inset 0px 0px 0px $bordersize $bordercolor;
+    -moz-box-shadow:inset 0px 0px 0px $bordersize $bordercolor;
+    box-shadow:inset 0px 0px 0px $bordersize $bordercolor;
+  }
+
+  &-status {
+    display: inline-block;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    border-radius: $borderradius;
+    background-color: #343267;
+  }
+}
