@@ -6,14 +6,14 @@ interface IProps extends WithNamespaces{
   someField?:string
 }
 
-class DragonTigerToe extends React.Component<IProps> {
+class DragonTigerToe extends React.Component<IProps, WithNamespaces> {
   public render(): React.ReactNode {
     return (
       <div>
-        <GameHeader>{this.props.t("test_message")}</GameHeader>
+        <GameHeader>{this.props.t("test_message.key")}</GameHeader>
       </div>
     );
   }
 }
 
-export default withNamespaces()(DragonTigerToe)
+export default withNamespaces("translation")(DragonTigerToe)

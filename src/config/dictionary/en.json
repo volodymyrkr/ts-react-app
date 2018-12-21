@@ -1,7 +1,9 @@
 {
   "en": {
     "translation": {
-      "test_message": "This is a test message"
+      "test_message": {
+        "key": "This is a test message"
+      }
     }
   }
 }
