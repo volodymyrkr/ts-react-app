@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@types/react-router-dom": "^4.3.1",
+    "inversify": "^5.0.1",
     "autoprefixer": "7.1.6",
     "babel-jest": "20.0.3",
     "babel-loader": "7.1.2",
@@ -33,6 +34,9 @@
     "react-dom": "^16.6.3",
     "react-i18next": "^8.4.0",
     "react-router-dom": "^4.3.1",
+    "react-scripts-ts": "3.1.0",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^6.3.3",
     "react-scripts-scss-ts": "^2.17.1",
     "resolve": "1.6.0",
     "rxjs": "^6.3.3",
