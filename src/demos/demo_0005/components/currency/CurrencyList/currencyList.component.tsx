@@ -19,7 +19,7 @@ const currencyListJSX = (data:ReadonlyArray<CurrencyType>) => {
       </ul>
     </div>
   )
-}
+};
 
 export default class CurrencyListComponent extends React.Component<ICurrencyListComponentProps> {
   public render() {

@@ -11,4 +11,4 @@ export const currencyTypeToNameMapper = (currency:CurrencyType):CurrencyName => 
     default:
       return "unknown";
   }
-}
+};
