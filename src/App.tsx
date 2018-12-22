@@ -2,7 +2,7 @@ import * as React from 'react';
 import './App.scss';
 
 import {Link} from "react-router-dom";
-import {demos, IDemoProps} from "./config/data";
+import {demos, IDemoProps} from "./config/data/routes";
 import logo from './logo.svg';
 
 class App extends React.Component {
