@@ -1,0 +1,12 @@
+.beer-container {
+  .beer {
+    &-label {
+      font-size: 1.2em;
+    }
+    &-image {
+      width:3em;
+      height: 5em;
+      object-fit: contain;
+    }
+  }
+}
