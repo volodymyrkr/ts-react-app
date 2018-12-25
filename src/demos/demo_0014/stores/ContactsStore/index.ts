@@ -21,6 +21,15 @@ export class ContactsStore {
   public changeSex(value:ContactSexType) {
     this.sex = value;
   }
+  public addContact(name:string, email:string):number {
+    const newId:number = this.all[this.all.length-1].id+1;
+    this.all.push({
+      email,
+      id: newId,
+      name
+    });
+    return newId;
+  }
 }
 
 export const contactsStore = new ContactsStore();

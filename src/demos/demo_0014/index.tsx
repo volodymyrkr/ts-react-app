@@ -7,6 +7,8 @@ export default class Demo0014 extends React.Component {
   public componentWillMount(): void {
     setTimeout(()=>{
       contactsStore.changeSex(ContactSexType.MALE);
+      contactsStore.addContact("Someone", "a1@a1.a1");
+      contactsStore.addContact("SomeoneElse", "a2@a2.a2");
     }, 5000);
   }
 
