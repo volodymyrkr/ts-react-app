@@ -1,0 +1,21 @@
+@import "../../../../styles/mixins.scss";
+
+.beer-container {
+  .beer {
+    &-image {
+
+    }
+
+    &-label {
+      color: yellow;
+
+      @include portrait {
+        color: green;
+      }
+
+      @include landscape {
+        color: blue;
+      }
+    }
+  }
+}

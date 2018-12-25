@@ -1,0 +1,15 @@
+@mixin landscape() {
+  .root_device_type_mobile & {
+    @media (orientation: landscape) {
+      @content;
+    }
+  }
+}
+
+@mixin portrait() {
+  .root_device_type_mobile & {
+    @media (orientation: portrait) {
+      @content;
+    }
+  }
+}

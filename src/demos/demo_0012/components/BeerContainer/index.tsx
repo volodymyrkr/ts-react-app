@@ -5,7 +5,7 @@ interface IProps extends IBeer {
   visible?: boolean
 }
 
-const BeerContainer: React.FunctionComponent<IProps> =(props:IProps) => {
+const BeerContainer: React.FunctionComponent<IProps> = (props:IProps) => {
   const { name, imageUrl} = props;
   return (
     <div className="beer-container">
