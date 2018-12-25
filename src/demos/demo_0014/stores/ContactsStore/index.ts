@@ -8,20 +8,18 @@ export class ContactsStore {
     {id: 3, name:"name3", email: "q3@q.q"}
   ];
 
-  @observable public prefix:string = "mr.";
-  @observable public sex: ContactSexType = ContactSexType.FEMALE;
+  @observable private sex: ContactSexType = ContactSexType.FEMALE;
 
   @computed get amount() {
     return this.all.length;
   }
 
-  public changeSex(value:ContactSexType) {
-    this.sex = value;
-    this.updateState();
+  @computed get prefix() {
+    return this.sex===ContactSexType.MALE?"ms.":"mr.";
   }
 
-  private updateState() {
-    this.prefix = this.sex===ContactSexType.MALE?"ms.":"mr.";
+  public changeSex(value:ContactSexType) {
+    this.sex = value;
   }
 }
 
