@@ -11,6 +11,7 @@ import Demo0011 from "../../demos/demo_0011";
 import Demo0012 from "../../demos/demo_0012";
 import Demo0013 from "../../demos/demo_0013";
 import Demo0014 from "../../demos/demo_0014";
+import Demo0015 from "../../demos/demo_0015";
 
 export interface IDemoProps {
   name: string,
@@ -33,6 +34,7 @@ export const demos:ReadonlyArray<IDemoProps> = [
   {name: "demo-0012", link: "/demo_0012", title: "Demo", description: "Punk API demo application with using superagent"},
   {name: "demo-0013", link: "/demo_0013", title: "Demo", description: "Punk API demo application with using mobx and fetch"},
   {name: "demo-0014", link: "/demo_0014", title: "Demo", description: "MobX Contacs demo is added"},
+  {name: "demo-0015", link: "/demo_0015", title: "Demo", description: "Inversify demo"},
 ];
 
 export const RouteComponentMapper = {
@@ -48,5 +50,6 @@ export const RouteComponentMapper = {
   "demo-0011": Demo0011,
   "demo-0012": Demo0012,
   "demo-0013": Demo0013,
-  "demo-0014": Demo0014
-}
+  "demo-0014": Demo0014,
+  "demo-0015": Demo0015,
+};
