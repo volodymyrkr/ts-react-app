@@ -25,7 +25,7 @@ export const demos:ReadonlyArray<IDemoProps> = [
   {name: "demo-0004", link: "/demo_0004", title: "Demo", description: "Some description"},
   {name: "demo-0005", link: "/demo_0005", title: "Demo", description: "Some description"},
   {name: "demo-0007", link: "/demo_0007", title: "Demo", description: "It's just a little demo of creating stream from document events"},
-  {name: "demo-0008", link: "/demo_0008", title: "Demo", description: "It's just a little demo of Mobx using"},
+  {name: "demo-0008", link: "/demo_0008", title: "Demo", description: "It's just a little demo of Inversify using"},
   {name: "demo-0009", link: "/demo_0009", title: "Demo", description: "It's just a little demo of SVG using"},
   {name: "demo-0010", link: "/demo_0010", title: "Demo", description: "ProgressBarComponent"},
   {name: "demo-0011", link: "/demo_0011", title: "Demo", description: "DragonTigerToe"},
