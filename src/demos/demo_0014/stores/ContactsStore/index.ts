@@ -1,4 +1,5 @@
 import {computed, observable} from "mobx";
+import {ContactSexType, IContactType} from "../../types/ContactType";
 
 export class ContactsStore {
   @observable public all: IContactType[] = [
@@ -8,9 +9,19 @@ export class ContactsStore {
   ];
 
   @observable public prefix:string = "mr.";
+  @observable public sex: ContactSexType = ContactSexType.FEMALE;
 
   @computed get amount() {
     return this.all.length;
+  }
+
+  public changeSex(value:ContactSexType) {
+    this.sex = value;
+    this.updateState();
+  }
+
+  private updateState() {
+    this.prefix = this.sex===ContactSexType.MALE?"ms.":"mr.";
   }
 }
 

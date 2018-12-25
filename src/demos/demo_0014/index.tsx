@@ -1,11 +1,12 @@
 import * as React from "react";
 import ContactsList from "./components/ContactsList";
 import {contactsStore} from "./stores/ContactsStore";
+import {ContactSexType} from "./types/ContactType";
 
 export default class Demo0014 extends React.Component {
   public componentWillMount(): void {
     setTimeout(()=>{
-      contactsStore.prefix = "ms...";
+      contactsStore.changeSex(ContactSexType.MALE);
     }, 5000);
   }
 
