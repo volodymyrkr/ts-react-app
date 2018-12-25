@@ -1,9 +1,9 @@
-interface IBeer {
+export interface IBeer {
   name: string,
   imageUrl: string
 }
 
-interface IBeerResponse {
+export interface IBeerResponse {
   name: string,
   image_url: string
 }

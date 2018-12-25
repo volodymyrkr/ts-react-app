@@ -1,5 +1,6 @@
 import * as React from "react";
 import BeerContainer from "../BeerContainer";
+import {IBeerResponse} from "../types";
 
 interface IProps {
   beers: IBeerResponse[]

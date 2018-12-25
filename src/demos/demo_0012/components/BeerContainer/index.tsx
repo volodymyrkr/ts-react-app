@@ -1,4 +1,5 @@
 import * as React from "react";
+import {IBeer} from "../types";
 import "./index.scss";
 
 interface IProps extends IBeer {
