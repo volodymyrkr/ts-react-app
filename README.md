@@ -10,6 +10,9 @@ Or you can use this command fro creation the project:
 ```sh
 npx create-react-app react-typescript-scss-new --scripts-version=react-scripts-scss-ts
 ```
+## demo_0014
+MobX simple example
+
 ## demo_0011
 Example of i18next
 
