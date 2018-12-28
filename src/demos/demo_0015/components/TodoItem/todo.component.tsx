@@ -1,10 +1,10 @@
 import * as React from "react";
 
 import {observer} from "mobx-react";
-import Todo from "./todo.store";
+import {ITodo} from "./todo.store";
 
 interface IProps {
-  store: Todo;
+  store: ITodo;
 }
 
 @observer
@@ -16,7 +16,7 @@ export default class TodoComponent extends React.Component<IProps> {
   public render(): React.ReactNode {
     return (
       <div>
-        Hello TodoComponent {this.props.store.title}
+        {this.props.store.title}
       </div>
     )
   }

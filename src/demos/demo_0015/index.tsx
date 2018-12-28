@@ -1,14 +1,14 @@
-import {Provider} from "mobx-react";
 import * as React from "react";
-import TodoComponent from "./components/TodoItem/todo.component";
-import Todo from "./components/TodoItem/todo.store";
+import TodoListComponent from "./components/TodoList/todolist.component";
+import TodolistStore from "./components/TodoList/todolist.store";
 
 export default class Demo0015 extends React.Component {
-  private store = new Todo({id:1,title:"Hello",status:0});
+  private store = new TodolistStore();
   constructor(props: Readonly<{}>) {
     super(props);
     setTimeout(()=>{
-      this.store.title = "Updated Hello";
+      console.log("Hello");
+      this.store.todos[1].title = "asd";
     }, 5000);
   }
   public render() {
@@ -17,9 +17,7 @@ export default class Demo0015 extends React.Component {
         <div>
           Hello from Demo_0015
         </div>
-        <Provider >
-          <TodoComponent store={this.store}/>
-        </Provider>
+        <TodoListComponent store={this.store}/>
       </div>
     );
   }
