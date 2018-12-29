@@ -1,0 +1,28 @@
+.todoform {
+  &-container {
+    background-color: cadetblue;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+
+    align-items: center;
+  }
+
+  &-label {
+    display: block;
+    text-align: right;
+    white-space: nowrap;
+    padding: 0 0.2em 0 0.8em;
+  }
+
+  &-input {
+    display: block;
+    width: 100%;
+    border: #d6d6d6;
+    border-style: inset;
+  }
+}

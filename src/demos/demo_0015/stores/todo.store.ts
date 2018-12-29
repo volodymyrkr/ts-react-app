@@ -1,17 +1,16 @@
 import {observable} from "mobx";
+import {ITodoType} from "../types/TodoType";
 
-export interface ITodo {
-  id:number,
-  title: string,
-  state: number,
+export interface ITodoProps {
+  store: TodoStore;
 }
 
-export class Todo implements ITodo{
+export default class TodoStore implements ITodoType{
   @observable public id:number=Math.random()*100000;
   @observable public title: string = "";
   @observable public state: number = 0;
 
-  constructor(value: ITodo) {
+  constructor(value: ITodoType) {
     this.id = value.id;
     this.state = value.state;
     this.title = value.title;
