@@ -1,7 +1,10 @@
 import * as React from "react";
 
 import {observer} from "mobx-react";
+import {mapTodoStateToClass} from "../../types/TodoStateType";
 import {ITodo} from "./todo.store";
+
+import "./todo.scss";
 
 interface IProps {
   store: ITodo;
@@ -15,7 +18,7 @@ export default class TodoComponent extends React.Component<IProps> {
 
   public render(): React.ReactNode {
     return (
-      <div>
+      <div className={`todoitem-container ${mapTodoStateToClass(this.props.store.state)}`}>
         {this.props.store.title}
       </div>
     )

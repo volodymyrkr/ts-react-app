@@ -3,17 +3,17 @@ import {observable} from "mobx";
 export interface ITodo {
   id:number,
   title: string,
-  status: number,
+  state: number,
 }
 
 export class Todo implements ITodo{
   @observable public id:number=Math.random()*100000;
   @observable public title: string = "";
-  @observable public status: number = 0;
+  @observable public state: number = 0;
 
   constructor(value: ITodo) {
     this.id = value.id;
-    this.status = value.status;
+    this.state = value.state;
     this.title = value.title;
   }
 }

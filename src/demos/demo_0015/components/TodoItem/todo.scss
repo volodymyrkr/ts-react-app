@@ -1,0 +1,20 @@
+.todoitem-container {
+  &-none,
+  &-open
+  {
+    color: lightseagreen;
+  }
+
+  &-inprogress {
+    font-weight: bold;
+    color: deeppink;
+  }
+
+  &-done {
+    color: darkgreen;
+  }
+
+  &-closed {
+    color: darkgrey;
+  }
+}

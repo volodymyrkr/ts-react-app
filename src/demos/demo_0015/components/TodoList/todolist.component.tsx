@@ -18,7 +18,8 @@ export default class TodoListComponent extends React.Component<IProps> {
         {
           this.props.store.todos
             .filter((item) => {
-              return this.props.store.filter === "" || item.title.indexOf(this.props.store.filter)>=0;
+              return this.props.store.filterSearchString === ""
+                || item.title.indexOf(this.props.store.filterSearchString)>=0;
             })
             .map((item: Todo, index: any) => {
             return (
@@ -33,6 +34,6 @@ export default class TodoListComponent extends React.Component<IProps> {
   }
 
   private changeFilterHandler = (event:React.FormEvent<HTMLInputElement>) => {
-    this.props.store.filter = event.currentTarget.value;
+    this.props.store.filterSearchString = event.currentTarget.value;
   };
 }
