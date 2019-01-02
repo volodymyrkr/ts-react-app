@@ -8,6 +8,7 @@ import CurrenciesPage from "../demos/demo_0004/components/CurrenciesPage";
 import Demo0005 from "../demos/demo_0005";
 import Demo0007 from "../demos/demo_0007";
 import Demo0008 from "../demos/demo_0008";
+import Demo0009 from "../demos/demo_0009";
 
 export default () => {
   return (
@@ -21,6 +22,7 @@ export default () => {
         <Route path="/demo_0005" exact={true} component={Demo0005}/>
         <Route path="/demo_0007" exact={true} component={Demo0007}/>
         <Route path="/demo_0008" exact={true} component={Demo0008}/>
+        <Route path="/demo_0009" exact={true} component={Demo0009}/>
       </Switch>
     </BrowserRouter>
   )
