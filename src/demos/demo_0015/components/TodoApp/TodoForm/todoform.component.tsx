@@ -1,12 +1,20 @@
 import * as React from "react";
 import {ITodosStoreProps} from "../../../stores/todos.store";
 
+import {inject, observer} from "mobx-react";
 import "./todoform.component.scss";
 
 interface IState {
   newTaskTitle: string
 }
-export default class TodoFormComponent extends React.Component<ITodosStoreProps, IState> {
+
+interface IPropsFromParent {
+  somefield?: string;
+}
+
+@inject("store")
+@observer
+export default class TodoFormComponent extends React.Component<ITodosStoreProps & IPropsFromParent, IState> {
   constructor(props: Readonly<ITodosStoreProps>) {
     super(props);
     this.state = {
@@ -27,15 +35,16 @@ export default class TodoFormComponent extends React.Component<ITodosStoreProps,
   }
 
   private keypressTaskTitleHandler = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key==="Enter") {
-      this.props.store.addTask(this.state.newTaskTitle);
+    const store = this.props.store!;
+    if (event.key === "Enter") {
+      store.addTask(this.state.newTaskTitle);
       this.setState({
         newTaskTitle: ""
       })
     }
   };
 
-  private changeTaskTitleHandler = (event:React.FormEvent<HTMLInputElement>) => {
+  private changeTaskTitleHandler = (event: React.FormEvent<HTMLInputElement>) => {
     this.setState({
       newTaskTitle: event.currentTarget.value
     })

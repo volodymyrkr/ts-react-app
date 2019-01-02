@@ -3,7 +3,7 @@ import {TodoStateType} from "../types/TodoStateType";
 import TodoStore from "./todo.store";
 
 export interface ITodosStoreProps {
-  store: TodosStore
+  store?: TodosStore
 }
 
 export default class TodosStore {

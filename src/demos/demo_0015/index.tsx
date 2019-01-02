@@ -5,6 +5,7 @@ import TodoHeaderComponent from "./components/TodoApp/TodoHeader/todoheader.comp
 import TodoListComponent from "./components/TodoApp/TodoList/todolist.component";
 import TodosStore from "./stores/todos.store";
 
+import {Provider} from "mobx-react";
 import "./styles/app.scss";
 
 export default class Demo0015 extends React.Component {
@@ -19,16 +20,18 @@ export default class Demo0015 extends React.Component {
 
   public render() {
     return (
+      <Provider store={this.store!}>
       <div className="todoapp-container">
         <TodoHeaderComponent>
           Hello from Demo_0015
         </TodoHeaderComponent>
         <div className="todobody-container">
-          <TodoFormComponent store={this.store}/>
-          <TodoListComponent store={this.store}/>
-          <TodoFilterComponent store={this.store}/>
+          <TodoFormComponent/>
+          <TodoListComponent/>
+          <TodoFilterComponent/>
         </div>
       </div>
+      </Provider>
     );
   }
 }

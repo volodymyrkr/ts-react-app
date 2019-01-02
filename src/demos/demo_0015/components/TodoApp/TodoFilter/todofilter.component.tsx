@@ -1,9 +1,16 @@
 import * as React from "react";
 import {ITodosStoreProps} from "../../../stores/todos.store";
 
+import {inject, observer} from "mobx-react";
 import "./todofilter.component.scss";
 
+@inject("store")
+@observer
 export default class TodoFilterComponent extends React.Component<ITodosStoreProps> {
+  constructor(props: Readonly<ITodosStoreProps>) {
+    super(props);
+  }
+
   public render(): React.ReactNode {
     return (
       <div className="todofilter-container">
@@ -12,7 +19,9 @@ export default class TodoFilterComponent extends React.Component<ITodosStoreProp
       </div>
     );
   }
-  private changeFilterHandler = (event:React.FormEvent<HTMLInputElement>) => {
-    this.props.store.filterSearchString = event.currentTarget.value;
+
+  private changeFilterHandler = (event: React.FormEvent<HTMLInputElement>) => {
+    const {store} = this.props;
+    store!.filterSearchString = event.currentTarget.value;
   }
 }
