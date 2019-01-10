@@ -6,7 +6,7 @@ create react-app my-app --scripts-version=react-scripts-ts
 
 Sass isn't supported by default it has to be added more details you can fin here
     [Link](https://github.com/wmonk/create-react-app-typescript/issues/92#issuecomment-415499593)
-Or you can use this command fro creation the project:
+Or you can use this command to create a new project:
 ```sh
 npx create-react-app react-typescript-scss-new --scripts-version=react-scripts-scss-ts
 ```
