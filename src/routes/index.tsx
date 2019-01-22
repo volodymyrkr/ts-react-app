@@ -1,7 +1,7 @@
+import App from "App";
+import {demos, RouteComponentMapper} from "config/data/routes";
 import * as React from "react";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
-import App from "../App";
-import {demos, RouteComponentMapper} from "../config/data/routes";
 
 export default () => {
   return (

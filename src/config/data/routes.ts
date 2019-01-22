@@ -12,7 +12,7 @@ import Demo0012 from "demos/demo_0012";
 import Demo0013 from "demos/demo_0013";
 import Demo0014 from "demos/demo_0014";
 import Demo0015 from "demos/demo_0015";
-import {Demo0017} from "demos/demo_0017";
+import Demo0017 from "demos/demo_0017";
 
 export interface IDemoProps {
   name: string,
