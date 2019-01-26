@@ -1,7 +1,14 @@
+import {observer} from "mobx-react";
 import * as React from 'react';
+import CounterStore from "../counter.store";
 
-export const Counter: React.FunctionComponent<{value: number}> = (props) => (
-  <div>
-    Counter: {props.value}
-  </div>
-);
+@observer
+export default class Counter extends React.Component <{ counterStore: CounterStore }> {
+  public render() {
+    return (
+      <div>
+        Counter: {this.props.counterStore.clickedCount}
+      </div>
+    )
+  }
+}
