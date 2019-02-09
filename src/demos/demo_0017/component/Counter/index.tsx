@@ -1,4 +1,4 @@
-import {resolve} from "inversify-react";
+import  {resolve} from "inversify-react";
 import {observer} from "mobx-react";
 import * as React from 'react';
 import CounterStore from "../counter.store";
