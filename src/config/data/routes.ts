@@ -14,6 +14,7 @@ import Demo0014 from "demos/demo_0014";
 import Demo0015 from "demos/demo_0015";
 import Demo0017 from "demos/demo_0017";
 import Demo0018 from "demos/demo_0018";
+import Demo0019 from "demos/demo_0019";
 
 export interface IDemoProps {
   name: string,
@@ -39,6 +40,7 @@ export const demos:ReadonlyArray<IDemoProps> = [
   {name: "demo-0015", link: "/demo_0015", title: "Demo", description: "Inversify demo"},
   {name: "demo-0017", link: "/demo_0017", title: "Demo", description: "Mobx demo"},
   {name: "demo-0018", link: "/demo_0018", title: "Demo", description: "One more Mobx demo"},
+  {name: "demo-0019", link: "/demo_0019", title: "Demo", description: "MobX+RxJs"},
 ];
 
 export const RouteComponentMapper = {
@@ -58,4 +60,5 @@ export const RouteComponentMapper = {
   "demo-0015": Demo0015,
   "demo-0017": Demo0017,
   "demo-0018": Demo0018,
+  "demo-0019": Demo0019,
 };
